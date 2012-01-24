@@ -1,0 +1,82 @@
+# This was based off the work of the author of the zenburn colorscheme,
+# used as a base to identify which elements affected which.
+#
+# Please remember that this color scheme requires a 256 color
+# terminal-emulator. Any modern X terminal emulator should have support
+# for that and you can enable it by calling mutt as "TERM=xterm-256color
+# mutt", or by adding "term screen-256color" to your .screenrc.
+#
+# See the Mutt Manual for a better description of all the different
+# objects and the colors that they should have
+#
+# You can change the indicator line from a bar to a little arrow that
+# sits to the left of the messages with the following line.
+#
+#set arrow_cursor
+#
+# Note that the colors can either follow the mutt color naming scheme,
+# or the word color followed by a number between 0 and 255. There are a
+# few that are not intuitive
+#
+# white -> 15 
+# black -> 0
+
+# Color of the sidebar, if installed
+color sidebar_new color0 color15
+
+# general-doesn't-fit stuff
+color normal     color0 color15             # This is the background and foreground for everything
+color error      color0 color15
+color markers    color15 color0             # Chars used as lines to divide the screen
+color tilde      color11 color15            # Can't seem to find an example
+color status     color15 color0             # Status Bars, top and bottom
+
+                                            # index stuff
+color indicator  color15 color0             # Menu Selection indicator
+color tree       color0 color15             # Characters for thread ascii art
+color index      color0 color15 ~A          # ALL MESSAGES
+color index      color29 color15 ~N         # New Messages
+color index      color0 color15 ~O          # Old Messages
+color index      color68 color15 ~P         # From myself?
+color index      color0 color15 ~T          # Tagged Messages
+color index      color131 color15 ~F        # Flagged messages
+color index      color255 color15 ~D        # Deleted Messages
+
+                                            # header stuff
+color hdrdefault color0 color15             # Default color of message header in pager
+color header     color0 color15 .           # The entire header
+color header     color0 color15 "^Subject"  # Just the subject line
+
+# gpg stuff
+color body       color0 color15 "^gpg: Good signature.*"
+color body       color0 color15 "^gpg: BAD signature.*"
+color body       color0 color15 "^gpg: Can't check signature.*"
+color body       color0 color15 "^-----BEGIN PGP SIGNED MESSAGE-----"
+color body       color0 color15 "^-----BEGIN PGP SIGNATURE-----"
+color body       color0 color15 "^-----END PGP SIGNED MESSAGE-----"
+color body       color0 color15 "^-----END PGP SIGNATURE-----"
+color body       color0 color15 "^Version: GnuPG.*"
+
+# url, email and web stuff
+color body       color26 color15 "(finger|ftp|http|https|news|telnet)://[^ >]*"
+color body       color26 color15 "<URL:[^ ]*>"
+color body       color26 color15 "www\\.[-.a-z0-9]+\\.[a-z][a-z][a-z]?([-_./~a-z0-9]+)?"
+color body       color65 color15 "mailto: *[^ ]+\(\\i?subject=[^ ]+\)?"
+color body       color65 color15 "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+# misc body stuff
+color attachment color233 color15
+color signature  color0 color15
+
+# quote levels
+color quoted     color65 color15
+color quoted1    color68 color15
+color quoted2    color70 color15
+color quoted3    color90 color15
+color quoted4    color90 color15
+color quoted5    color90 color15
+color quoted6    color90 color15
+color quoted7    color90 color15
+color quoted8    color90 color15
+color quoted9    color90 color15
+
