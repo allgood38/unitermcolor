@@ -1,3 +1,6 @@
+UNITTERMCOLOR 
+=============
+
 This utility will be able to convert color schemes across VIM, irssi and Mutt.
 Given that irssi and Mutt are terminal based, the schemes will need to be
 within the 256 colour palette.
